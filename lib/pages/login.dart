@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/pages/sub/Input.dart';
+import 'package:login_page/pages/sub/input2.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
-
+  Login({super.key});
+  var inp = Input();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,12 +36,12 @@ class Login extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 10),
-              const Input(
-                hintText: 'Email',
+              Input(
+                hintText: 'Username',
                 obsqureText: false,
               ),
               const SizedBox(height: 2),
-              const Input(hintText: 'Password', obsqureText: true),
+              Input2(hintText: 'Password', obsqureText: true),
               const SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -55,8 +56,8 @@ class Login extends StatelessWidget {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/home');
+                onPressed: () async {
+                  await inp.check_log(context);
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,

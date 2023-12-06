@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_page/pages/chat_page.dart';
 
 class Listview extends StatelessWidget {
   const Listview({super.key});
@@ -10,6 +11,12 @@ class Listview extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: ListTile(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => chat_page(name: 'Name${index + 1}'),
+              ),
+            ),
             leading: index % 2 == 0
                 ? const CircleAvatar(
                     maxRadius: 40,
@@ -21,6 +28,7 @@ class Listview extends StatelessWidget {
               'Name${index + 1}',
               style: const TextStyle(fontSize: 20),
             ),
+            subtitle: Text('Contact${index + 1}'),
             trailing: Text('${index + 1} :00 pm'),
           ),
         );
