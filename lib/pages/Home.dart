@@ -32,9 +32,14 @@ class Home extends StatelessWidget {
   }
 
   Future<void> remove(context) async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('value');
-    Navigator.pushNamedAndRemoveUntil(context, '/log', (route) => false);
+    try {
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.remove('Pass');
+      await prefs.remove('User');
+      Navigator.pushNamedAndRemoveUntil(context, '/log', (route) => false);
+    } catch (e) {
+      print('Error: $e');
+    }
   }
 
   void allert(context) => showDialog(

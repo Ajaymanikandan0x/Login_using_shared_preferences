@@ -40,8 +40,9 @@ class _SplashState extends State<Splash> {
 
   Future<void> get_log(context) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final save_data = prefs.getString('value');
-    if (save_data != null) {
+    final save_data = prefs.getString('User');
+    final save_pass = prefs.getString('Pass');
+    if (save_data != null && save_pass != null) {
       Navigator.pushReplacementNamed(context, '/home');
     } else {
       Navigator.pushReplacementNamed(context, '/log');
