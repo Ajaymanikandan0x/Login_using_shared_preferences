@@ -14,7 +14,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(const Duration(seconds: 3), () => get_log(context));
+    Future.delayed(const Duration(seconds: 2), () => get_log(context));
   }
 
   @override

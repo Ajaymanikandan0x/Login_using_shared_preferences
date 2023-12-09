@@ -45,7 +45,7 @@ class Home extends StatelessWidget {
   void allert(context) => showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Exit'),
+          title: const Text('Exit',style: TextStyle(color: Colors.red),),
           content: const Text('Do you want to exit'),
           actions: [
             TextButton(

@@ -58,8 +58,8 @@ class Input extends StatelessWidget {
               ),
               obscureText: true,
               validator: (value) {
-                if (value == null && value!.length > 4) {
-                  return "Please enter a password with 4 characters ";
+                if (value!.length < 4) {
+                  return "Enter minimum 4 characters.";
                 } else {
                   return null;
                 }
