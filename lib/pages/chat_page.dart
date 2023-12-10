@@ -15,7 +15,7 @@ class chat_page extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.pink[800],
         ),
-        body: Padding(
+        body: const Padding(
           padding: EdgeInsets.all(10.0),
           child: Text('Bla'),
         ),

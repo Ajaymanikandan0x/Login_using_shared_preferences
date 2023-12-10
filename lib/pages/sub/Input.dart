@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Input extends StatelessWidget {
@@ -20,7 +21,7 @@ class Input extends StatelessWidget {
           children: [
             TextFormField(
               controller: user,
-              style: const TextStyle(
+              style: GoogleFonts.novaSquare(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w400,
                 wordSpacing: 2,
@@ -45,7 +46,7 @@ class Input extends StatelessWidget {
             const SizedBox(height: 8),
             TextFormField(
               controller: pass,
-              style: const TextStyle(
+              style: GoogleFonts.novaSquare(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w400,
                 wordSpacing: 2,

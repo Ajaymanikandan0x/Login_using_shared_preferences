@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:login_page/pages/sub/Listview.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -45,7 +46,12 @@ class Home extends StatelessWidget {
   void allert(context) => showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Exit',style: TextStyle(color: Colors.red),),
+          title: Text(
+            'Exit',
+            style: GoogleFonts.lobster(
+              textStyle:const TextStyle(color: Colors.red),
+            ),
+          ),
           content: const Text('Do you want to exit'),
           actions: [
             TextButton(
